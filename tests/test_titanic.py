@@ -58,7 +58,7 @@ for input, output in test_dataset:
 nn.train()
 
 while nn.is_training():
-    print 'Training...'
+    print('Training...')
     time.sleep(1)
 
 # --- Test
@@ -68,4 +68,4 @@ for input, output in test_dataset:
     if not output[nn_output]:
         errors += 1
 
-print '%s prediction errors on %s test items' % (errors, len(test_dataset))
+print('%s prediction errors on %s test items' % (errors, len(test_dataset)))

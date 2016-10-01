@@ -36,21 +36,20 @@ for input, output in test_dataset:
 # --- Train
 nn.train()
 
-#while nn.is_training():
-#    print 'Training...'
-#    time.sleep(1)
-
-# Due to bug with nn.info, we just sleep
-time.sleep(1)
+while nn.is_training():
+    print('Training...')
+    time.sleep(1)
 
 # --- Test
 errors = 0
 for input, output in test_dataset:
     nn_output = nn.run(input)
-    print 'NN calculation %s+%s = %s' % (input['number1'],
+    print('NN calculation %s+%s = %s' % (input['number1'],
                                          input['number2'],
-                                         nn_output['result'])
+                                         nn_output['result']))
     if int(float(nn_output['result'])) != output['result']:
         errors += 1
 
-print '%s prediction errors on %s test items' % (errors, len(test_dataset))
+print('%s prediction errors on %s test items' % (errors, len(test_dataset)))
+
+print(nn.run({'number1': 1, 'number2': 2}))

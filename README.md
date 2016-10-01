@@ -69,6 +69,13 @@ Run the network on the `input`, returning a `dict` as the result.
 Required arguments:
 * `input`: (dict) The input vector encoded as `dict`
 
+Example:
+```python
+print(nn.run({'number1': 1, 'number2': 2}))
+# =>
+{'result': '4.7173097692441601'}
+```
+
 
 ## NeuralNetwork.classify(input)
 
