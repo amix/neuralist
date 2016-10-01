@@ -84,6 +84,13 @@ Run the network on the `input`, returning a class as the result.
 Required arguments:
 * `input`: (dict) The input vector encoded as `dict`
 
+Example (from Titanic example):
+```python
+print(nn.classify({...}))
+# =>
+'dead'
+```
+
 
 ## NeuralNetwork.observe_train(input, output)
 
@@ -92,6 +99,15 @@ Add a data sample into the training dataset.
 Required arguments:
 * `input`: (dict) The input vector encoded as `dict`
 * `output`: (dict) The output vector encoded as `output`
+
+Example:
+```python
+nn.observe_train(input={'number1': 1, 'number2': 2},
+                 output={'result': 3})
+
+nn.observe_train(input={'age': 25, 'male': 0, 'female': 1},
+                 output={'dead': 0, 'alive': 1})
+```
 
 
 ## NeuralNetwork.observe_test(input, output)
@@ -136,3 +152,10 @@ Returns a `dict` with info about the neural network. The keys are the same that 
 # More examples
 
 To see how to use this library please see the [tests](https://github.com/amix/neuralist/tree/master/tests) directory -- there's an example of a neural network that can do additions and one that can answer if a Titanic passenger will survive or not.
+
+To run the examples:
+
+```
+$ python -m tests.test_addition
+$ python -m tests.test_titanic
+```
