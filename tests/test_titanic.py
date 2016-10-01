@@ -15,7 +15,7 @@ nn = NeuralNetwork('titanic',
                    type='classifier',
                    inputs=INPUTS,
                    outputs=OUTPUTS,
-                   hidden_layers=[15],
+                   hidden_layers=(15,),
                    dataset_size=1000,
                    testset_size=500)
 

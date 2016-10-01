@@ -143,7 +143,7 @@ class NeuralNetwork:
         return self.info().get('training', 1) == 1
 
     def train(self, max_cycles=None, max_time=None,
-              autostop=True, backtrack=False):
+              autostop=True, backtrack=True):
         args = [ self.name ]
 
         if max_cycles:

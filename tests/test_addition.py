@@ -10,7 +10,7 @@ nn = NeuralNetwork('additions',
                    type='regressor',
                    inputs=('number1', 'number2'),
                    outputs=('result',),
-                   hidden_layers=[3],
+                   hidden_layers=(3,),
                    dataset_size=50,
                    testset_size=10)
 
