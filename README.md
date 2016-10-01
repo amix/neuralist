@@ -73,7 +73,7 @@ Example:
 ```python
 print(nn.run({'number1': 1, 'number2': 2}))
 # =>
-{'result': '4.7173097692441601'}
+{'result': '3.7173097692441601'}
 ```
 
 

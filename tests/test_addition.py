@@ -51,5 +51,3 @@ for input, output in test_dataset:
         errors += 1
 
 print('%s prediction errors on %s test items' % (errors, len(test_dataset)))
-
-print(nn.run({'number1': 1, 'number2': 2}))
